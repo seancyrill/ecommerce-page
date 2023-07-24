@@ -15,7 +15,7 @@ export default function ItemPhotos({ images }: ItemPhotosType) {
     <div className="flex flex-col">
       {<div className="relative flex max-h-[40%] lg:max-h-full">
           <div onClick={() => setImgDisplay(prev => prev > 0 ? prev - 1 : prev)} className="lg:hidden absolute top-1/2 -translate-y-1/2 bg-White w-12 h-12 grid place-content-center rounded-full cursor-pointer z-10 hover:opacity-50 ml-2"><img src="/images/icon-previous.svg" alt="previousBtn"/></div>
-          <img src={images.full[imgDisplay]} alt="imgDisplayed" onClick={() => fullScreen.current?.showModal()} className="w-full lg:max-w-xl lg:min-w-[380px] lg: object-cover mb-4 lg:mb-8 sm:rounded-xl hover:opacity-50 hover:border-4 hover:border-Orange"/>
+          <img src={images.full[imgDisplay]} alt="imgDisplayed" onClick={() => fullScreen.current?.showModal()} className="w-full lg:max-w-xl lg:min-w-[380px] lg: object-cover mb-4 lg:mb-8 sm:rounded-xl hover:opacity-90 hover:border-4 hover:border-Orange"/>
           <div onClick={() => setImgDisplay(prev => prev + 1 !== images.full.length ? prev + 1 : prev)} className="lg:hidden  absolute top-1/2 -translate-y-1/2 right-0 bg-White w-12 h-12 grid place-content-center rounded-full cursor-pointer z-10 hover:opacity-50 mr-2" ><img src="/images/icon-next.svg" alt="nextBtn" className="" /></div>
       </div>
       }
